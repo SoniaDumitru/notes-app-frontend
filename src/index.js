@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const app = new App();
+    app.attachEventListeners();
     const endPoint = 'http://localhost:3001/notes';
     fetch(endPoint)
       .then(res => res.json())

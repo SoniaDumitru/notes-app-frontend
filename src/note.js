@@ -5,6 +5,10 @@ class Note {
       this.content = data.content;
       Note.all.push(this);
     }
+
+    static findById(id) {
+        return this.all.find(note => note.id === id);
+    }
   
     renderListItem() {
       return `
