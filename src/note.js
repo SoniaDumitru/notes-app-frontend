@@ -18,6 +18,22 @@ class Note {
         </h3>
       </li>`;
     }
+
+  renderUpdatedForm() {
+    return `
+        <form data-id=${this.id}>
+        <label>Title</label>
+        <p>
+            <input type="text" value="${this.title}" />
+        </p>
+        <label>Content</label>
+        <p>
+            <textarea>${this.content}</textarea>
+        </p>
+        <button type='submit'>Save Note</button>
+        </form>
+    `;
   }
+}
   
   Note.all = [];
