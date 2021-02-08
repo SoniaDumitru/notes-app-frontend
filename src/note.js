@@ -7,8 +7,13 @@ class Note {
     }
 
     static findById(id) {
-        return this.all.find(note => note.id === id);
+        return this.all.find(note => note.id == id);
     }
+
+    update({ title, content }) {
+        this.title = title;
+        this.content = content;
+      }
   
     renderListItem() {
       return `
